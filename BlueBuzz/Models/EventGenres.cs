@@ -10,5 +10,7 @@ namespace BlueBuzz.Models
         public int Id { get; set; }
         public string Genre { get; set; }
         public string VolumeLevel { get; set; }
+
+        public virtual ICollection<Events> Events { get; set; }
     }
 }

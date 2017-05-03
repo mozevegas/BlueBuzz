@@ -1,5 +1,6 @@
-﻿@*@model IEnumerable<BlueBuzz.Models.Events>*@
-@model BlueBuzz.ViewModels.HomeIndexViewModel
+﻿@model IEnumerable<BlueBuzz.Models.Events>
+
+@*@model BlueBuzz.ViewModels.HomeIndexViewModel*@
 @{
     ViewBag.Title = "Blue Buzz Events";
 }
@@ -9,15 +10,15 @@
     <h2>Events Page</h2>
 </div>
 
-@foreach (var Item in Model.Events)
+@foreach (var Item in Model)  // Item is the List of the class Events
 {
     @Item.Title
-    @Html.DisplayFor(modelItem => events.Title)
-    @Html.DisplayFor(modelItem => events.Description)
-    @Html.DisplayFor(modelItem => item.TimeStart)
-    @Html.DisplayFor(modelItem => item.TimeEnd)
-    @Html.DisplayFor(modelItem => item.Venue)
-    @Html.DisplayFor(modelItem => item.Genre)
+    @Html.DisplayFor(modelItem => Item.Title)
+    @Html.DisplayFor(modelItem => Item.Description)
+    @Html.DisplayFor(modelItem => Item.TimeStart)
+    @Html.DisplayFor(modelItem => Item.TimeEnd)
+    @Html.DisplayFor(modelItem => Item.Venue)
+    @Html.DisplayFor(modelItem => Item.Genre)
 
 }
 

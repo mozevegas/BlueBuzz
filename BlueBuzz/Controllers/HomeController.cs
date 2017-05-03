@@ -11,10 +11,11 @@ namespace BlueBuzz.Controllers
     {
         public ActionResult Index()
         {
-            var eventsFromCache = HttpRuntime.Cache["events"];
+            var eventsFromCache = HttpRuntime.Cache["events"] as IEnumerable<Events> ;  // Added the Casting
             if (eventsFromCache == null)
             {
                 var events = new ApplicationDbContext().Events.OrderBy(o => o.Title).ToList();
+                // or should use Events.Include(i => i.Genre).Include(i => i.Venue).ToList();
                 // add the menu to cache
                 HttpRuntime.Cache.Add(
                     "events",
@@ -24,7 +25,7 @@ namespace BlueBuzz.Controllers
                     new TimeSpan(),
                     System.Web.Caching.CacheItemPriority.High,
                     null);
-                eventsFromCache = HttpRuntime.Cache["menu"];
+                eventsFromCache = HttpRuntime.Cache["events"] as IEnumerable<Events>;
 
             }
             return View(eventsFromCache);

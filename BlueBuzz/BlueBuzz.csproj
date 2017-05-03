@@ -210,6 +210,10 @@
     <Compile Include="Migrations\201705030452588_Foreign Key added to Model.Designer.cs">
       <DependentUpon>201705030452588_Foreign Key added to Model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705031840196_something-new.cs" />
+    <Compile Include="Migrations\201705031840196_something-new.Designer.cs">
+      <DependentUpon>201705031840196_something-new.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EventGenres.cs" />
@@ -311,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705030452588_Foreign Key added to Model.resx">
       <DependentUpon>201705030452588_Foreign Key added to Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705031840196_something-new.resx">
+      <DependentUpon>201705031840196_something-new.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
