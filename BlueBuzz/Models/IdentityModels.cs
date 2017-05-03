@@ -29,5 +29,10 @@ namespace BlueBuzz.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BlueBuzz.Models.Events> Events { get; set; }
+        public System.Data.Entity.DbSet<BlueBuzz.Models.EventGenres> EventGenres { get; set; }
+        public System.Data.Entity.DbSet<BlueBuzz.Models.Venues> Venues { get; set; }
+
     }
 }

@@ -10,11 +10,14 @@ namespace BlueBuzz.Models
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public DateTime TimeStart { get; set; }
-        public DateTime TimeEnd { get; set; }
+        public DateTime? TimeStart { get; set; }
+        public DateTime? TimeEnd { get; set; }
 
 
-        public int VenueId { get; set; }
-        public int GenreId { get; set; }
+        public int? VenueId { get; set; }
+        public Venues Venue { get; set; }
+
+        public int? GenreId { get; set; }
+        public EventGenres Genre { get; set; }
     }
 }
