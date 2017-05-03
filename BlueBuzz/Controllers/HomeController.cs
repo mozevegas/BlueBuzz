@@ -13,6 +13,12 @@ namespace BlueBuzz.Controllers
             return View();
         }
 
+        [Authorize]
+        public ActionResult Owner ()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
