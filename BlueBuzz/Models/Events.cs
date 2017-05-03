@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -15,9 +16,11 @@ namespace BlueBuzz.Models
 
 
         public int? VenueId { get; set; }
+        [ForeignKey("VenueId")]
         public Venues Venue { get; set; }
 
         public int? GenreId { get; set; }
+        [ForeignKey("GenreId")]
         public EventGenres Genre { get; set; }
     }
 }

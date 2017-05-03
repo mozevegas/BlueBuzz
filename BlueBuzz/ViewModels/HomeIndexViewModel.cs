@@ -8,6 +8,6 @@ namespace BlueBuzz.ViewModels
 {
     public class HomeIndexViewModel
     {
-        public List<Events> Event { get; set; }
+        public List<Events> Events { get; set; }
     }
 }

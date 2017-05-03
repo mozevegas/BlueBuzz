@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlueBuzz.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,23 @@ namespace BlueBuzz.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var eventsFromCache = HttpRuntime.Cache["events"];
+            if (eventsFromCache == null)
+            {
+                var events = new ApplicationDbContext().Events.OrderBy(o => o.Title).ToList();
+                // add the menu to cache
+                HttpRuntime.Cache.Add(
+                    "events",
+                    events,
+                    null,
+                    DateTime.Now.AddDays(7),
+                    new TimeSpan(),
+                    System.Web.Caching.CacheItemPriority.High,
+                    null);
+                eventsFromCache = HttpRuntime.Cache["menu"];
+
+            }
+            return View(eventsFromCache);
         }
 
         [Authorize]
@@ -19,7 +36,8 @@ namespace BlueBuzz.Controllers
             return View();
         }
 
-        public ActionResult About()
+
+        public ActionResult Create()
         {
             ViewBag.Message = "Your application description page.";
 

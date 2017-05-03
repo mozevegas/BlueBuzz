@@ -206,6 +206,10 @@
     <Compile Include="Migrations\201705030433337_Three Tables part 2.Designer.cs">
       <DependentUpon>201705030433337_Three Tables part 2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705030452588_Foreign Key added to Model.cs" />
+    <Compile Include="Migrations\201705030452588_Foreign Key added to Model.Designer.cs">
+      <DependentUpon>201705030452588_Foreign Key added to Model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EventGenres.cs" />
@@ -274,6 +278,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\_EventItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -302,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705030433337_Three Tables part 2.resx">
       <DependentUpon>201705030433337_Three Tables part 2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705030452588_Foreign Key added to Model.resx">
+      <DependentUpon>201705030452588_Foreign Key added to Model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
